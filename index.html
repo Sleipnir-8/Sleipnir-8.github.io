@@ -157,6 +157,86 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-WIN程序入门——俄罗斯方块·下" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/07/09/WIN%E7%A8%8B%E5%BA%8F%E5%85%A5%E9%97%A8%E2%80%94%E2%80%94%E4%BF%84%E7%BD%97%E6%96%AF%E6%96%B9%E5%9D%97%C2%B7%E4%B8%8B/">C程序入门——俄罗斯方块·下</a>
+    </h1>
+  
+
+        
+        <a href="/2020/07/09/WIN%E7%A8%8B%E5%BA%8F%E5%85%A5%E9%97%A8%E2%80%94%E2%80%94%E4%BF%84%E7%BD%97%E6%96%AF%E6%96%B9%E5%9D%97%C2%B7%E4%B8%8B/" class="archive-article-date">
+  	<time datetime="2020-07-09T14:51:57.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-09</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><img src="https://i.loli.net/2020/07/09/eDYGujX6WMZslTr.jpg" alt></p>
+<p>此篇为俄罗斯方块的结尾，对定时器函数、消行计分实现、按键控制及其他细节进行把控。完整的代码也将整合在此篇。</p>
+<h3 id="定时器函数"><a href="#定时器函数" class="headerlink" title="定时器函数"></a>定时器函数</h3><p>在游戏进行时，定时器间隔一段时间响应。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">void OnTime(HWND hWnd) &#123;</span><br><span class="line">	HDC hDc &#x3D; GetDC(hWnd);    &#x2F;&#x2F;内核对象</span><br><span class="line">	if (Bottom() &#x3D;&#x3D; 1 &amp;&amp; Above() &#x3D;&#x3D; 1)&#123;  &#x2F;&#x2F;满足两种情况</span><br><span class="line">		SqFa();                          &#x2F;&#x2F;继续下落</span><br><span class="line">		g_Line++;</span><br><span class="line">	&#125;</span><br><span class="line">	else &#123;</span><br><span class="line">		Change();             &#x2F;&#x2F;在显示新随机块前，将1 -&gt; 2, 2的状态为Fixed</span><br><span class="line">		Eliminate();          &#x2F;&#x2F;消除行</span><br><span class="line">		level(hWnd);          &#x2F;&#x2F;是否增加难度</span><br><span class="line">		if(GameOver() &#x3D;&#x3D; 0)&#123;</span><br><span class="line">			KillTimer(hWnd, DEF_TIMER1);</span><br><span class="line">			return  0;</span><br><span class="line">		&#125;                     &#x2F;&#x2F;检测游戏是否结束</span><br><span class="line">		Posi();               &#x2F;&#x2F;定位变形基准点</span><br><span class="line">		CreatePresentSquare();&#x2F;&#x2F;转化后台随机块,取得g_SquareID</span><br><span class="line">		CreateRandSquare();   &#x2F;&#x2F;产生后台随机块</span><br><span class="line">	&#125;</span><br><span class="line">    OnPaint(hDc);                 &#x2F;&#x2F;显示方块</span><br><span class="line">	ReleaseDC(hWnd,hDc);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+        
+          <a class="article-more-a" href="/2020/07/09/WIN%E7%A8%8B%E5%BA%8F%E5%85%A5%E9%97%A8%E2%80%94%E2%80%94%E4%BF%84%E7%BD%97%E6%96%AF%E6%96%B9%E5%9D%97%C2%B7%E4%B8%8B/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">C程序入门</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/07/09/WIN%E7%A8%8B%E5%BA%8F%E5%85%A5%E9%97%A8%E2%80%94%E2%80%94%E4%BF%84%E7%BD%97%E6%96%AF%E6%96%B9%E5%9D%97%C2%B7%E4%B8%8B/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+
+  
     <article id="post-WIN程序入门——俄罗斯方块·中" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -164,7 +244,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2020/07/09/WIN%E7%A8%8B%E5%BA%8F%E5%85%A5%E9%97%A8%E2%80%94%E2%80%94%E4%BF%84%E7%BD%97%E6%96%AF%E6%96%B9%E5%9D%97%C2%B7%E4%B8%AD/">WIN程序入门——俄罗斯方块·中</a>
+      <a class="article-title" href="/2020/07/09/WIN%E7%A8%8B%E5%BA%8F%E5%85%A5%E9%97%A8%E2%80%94%E2%80%94%E4%BF%84%E7%BD%97%E6%96%AF%E6%96%B9%E5%9D%97%C2%B7%E4%B8%AD/">C程序入门——俄罗斯方块·中</a>
     </h1>
   
 
@@ -195,7 +275,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">WIN程序入门</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">C程序入门</a>
         		</li>
       		
 		</ul>
@@ -243,7 +323,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2020/07/09/WIN%E7%A8%8B%E5%BA%8F%E5%85%A5%E9%97%A8%E2%80%94%E2%80%94%E4%BF%84%E7%BD%97%E6%96%AF%E6%96%B9%E5%9D%97%C2%B7%E4%B8%8A/">Win程序入门——俄罗斯方块·上（C语言版）</a>
+      <a class="article-title" href="/2020/07/09/WIN%E7%A8%8B%E5%BA%8F%E5%85%A5%E9%97%A8%E2%80%94%E2%80%94%E4%BF%84%E7%BD%97%E6%96%AF%E6%96%B9%E5%9D%97%C2%B7%E4%B8%8A/">C程序入门——俄罗斯方块·上</a>
     </h1>
   
 
@@ -273,7 +353,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">WIN程序入门</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">C程序入门</a>
         		</li>
       		
 		</ul>
@@ -567,7 +647,7 @@
 
         
         <a href="/2020/05/15/hello-world/" class="archive-article-date">
-  	<time datetime="2020-05-15T07:02:39.800Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-15</time>
+  	<time datetime="2020-05-15T13:01:06.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-15</time>
 </a>
         
       </header>
@@ -731,7 +811,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">WIN程序入门</a>
+                <a href="javascript:void(0)" class="js-tag color1">C程序入门</a>
               </li>
             
             <div class="clearfix"></div>
