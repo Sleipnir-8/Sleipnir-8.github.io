@@ -17,7 +17,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://i.loli.net/2020/08/07/Pl241dCbgDpwrx6.jpg">
 <meta property="article:published_time" content="2020-10-20T12:39:39.000Z">
-<meta property="article:modified_time" content="2020-10-20T12:47:05.055Z">
+<meta property="article:modified_time" content="2020-10-20T12:51:24.159Z">
 <meta property="article:author" content="Sleipnir">
 <meta property="article:tag" content="tools">
 <meta name="twitter:card" content="summary">
@@ -215,7 +215,46 @@
 <a id="more"></a>
 
 <h3 id="字符集合"><a href="#字符集合" class="headerlink" title="字符集合"></a>字符集合</h3><p>集合(Set)是一对方括号[]内的一组字符，用于指代整数组字符中的任意一个。</p>
-<p>| <strong>字符</strong>   |            描述                     |<br>| ———– | —————————————————— |、<br>| [abc]       | 指定字符（a，b或c之一）                                          |<br>| [a-z]       | 任意小写字母                                           |<br>| [^abc]      | ^表示否                                                |<br>| [0246]      | 指定数字0，2，4，6之一                                 |<br>| [0-9]       | 任何一位非负整数                                       |<br>| [1-5] [0-9] | 10~59之间任意整数                                      |<br>| [a-z] [A-Z] | 任何大小写字母                                         |<br>| [+]         | 在集合中，+、*、|、()、￥、{}没有特殊含义，[+]匹配+号 |</p>
+<table>
+<thead>
+<tr>
+<th><strong>字符</strong></th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>[abc]</td>
+<td>指定字符（a，b或c之一）</td>
+</tr>
+<tr>
+<td>[a-z]</td>
+<td>任意小写字母</td>
+</tr>
+<tr>
+<td>[^abc]</td>
+<td>^表示否</td>
+</tr>
+<tr>
+<td>[0246]</td>
+<td>指定数字0，2，4，6之一</td>
+</tr>
+<tr>
+<td>[0-9]</td>
+<td>任何一位非负整数</td>
+</tr>
+<tr>
+<td>[1-5] [0-9]</td>
+<td>10~59之间任意整数</td>
+</tr>
+<tr>
+<td>[a-z] [A-Z]</td>
+<td>任何大小写字母</td>
+</tr>
+<tr>
+<td>[+]</td>
+<td>在集合中，+、*、\、</td>
+</tr>
+</tbody></table>
 <p>Python提供名为re的内置包，可用于处理正则表达式。</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">re.findall(&quot;[0-5]&quot;,txt)   &#x2F;&#x2F;只表示一个字符，结果会拆开为单个字符</span><br><span class="line">re.findall(&quot;[0-5]+&quot;,txt)  &#x2F;&#x2F;用+表示连续多个</span><br></pre></td></tr></table></figure>
 
@@ -283,7 +322,7 @@
 
 <h3 id="元字符"><a href="#元字符" class="headerlink" title="元字符"></a>元字符</h3><p>元字符是具有特殊含义的字符，在正则表达式中拥有很高的优先级。[]、\、+都是元字符。</p>
 <p>元字符的运算优先级中，\最高，其次为各种括号。</p>
-<p><strong>:对随后的通配符进行转义，因此需要用\来表示\本身</strong></p>
+<p><strong>\:对随后的通配符进行转义，因此需要用\\来表示\本身</strong></p>
 <p><strong>[]:用于限定字符集合</strong></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">re.findall(&quot;[w,]+&quot;,&quot;123,hello world...汉_字!&quot;)</span><br><span class="line">&#x2F;&#x2F;检索结果: &#39;123，hello&#39;,&#39;world&#39;,&#39;汉_字&#39;</span><br></pre></td></tr></table></figure>
 
@@ -395,6 +434,15 @@
 
   
 <nav id="article-nav">
+  
+    <a href="/2020/10/29/%E6%9C%89%E5%BA%8F%E8%A1%A8%E5%BD%92%E5%B9%B6/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          数据结构练习（Updating）
+        
+      </div>
+    </a>
   
   
     <a href="/2020/09/16/Java%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AEwin%E7%89%88/" id="article-nav-older" class="article-nav-link-wrap">
@@ -525,10 +573,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">工具</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">Java</a>
               </li>
              
@@ -537,11 +581,19 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">HTML&CSS</a>
+                <a href="javascript:void(0)" class="js-tag color3">工具</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">tools</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">HTML&CSS</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">数据结构</a>
               </li>
             
             <div class="clearfix"></div>
