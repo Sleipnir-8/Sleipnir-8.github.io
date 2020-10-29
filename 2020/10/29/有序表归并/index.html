@@ -8,16 +8,16 @@
   <link rel="dns-prefetch" href="https://Sleipnir-8.github.io">
   <title>数据结构练习（Updating） | ╰(￣▽￣)╭ 喔，欢迎你啊！</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="练习1（1）问题描述 ​        对任意输入的两个按值非递减有序的整数序列，写一程序将它们归并成一个按值非递减有序序列。请分别用顺序存储结构和链式存储结构表示整数序列，并相应完成归并。 （2）输入描述 ​       文本文件“input.txt”中保存了n个测试用例，文件以-1结束。每个用例的第一行m1表示第一个待归并有序序列的元素个数，第二行为该序列的m1个元素，第三行m2表示第二个待">
+  <meta name="description" content="此篇为有关于数据结构的练习">
 <meta property="og:type" content="article">
 <meta property="og:title" content="数据结构练习（Updating）">
 <meta property="og:url" content="https://sleipnir-8.github.io/2020/10/29/%E6%9C%89%E5%BA%8F%E8%A1%A8%E5%BD%92%E5%B9%B6/index.html">
 <meta property="og:site_name" content="╰(￣▽￣)╭ 喔，欢迎你啊！">
-<meta property="og:description" content="练习1（1）问题描述 ​        对任意输入的两个按值非递减有序的整数序列，写一程序将它们归并成一个按值非递减有序序列。请分别用顺序存储结构和链式存储结构表示整数序列，并相应完成归并。 （2）输入描述 ​       文本文件“input.txt”中保存了n个测试用例，文件以-1结束。每个用例的第一行m1表示第一个待归并有序序列的元素个数，第二行为该序列的m1个元素，第三行m2表示第二个待">
+<meta property="og:description" content="此篇为有关于数据结构的练习">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://i.loli.net/2020/08/07/guwAYdj5h1lH4Qm.jpg">
 <meta property="article:published_time" content="2020-10-29T11:45:02.000Z">
-<meta property="article:modified_time" content="2020-10-29T12:17:28.627Z">
+<meta property="article:modified_time" content="2020-10-29T12:27:38.133Z">
 <meta property="article:author" content="Sleipnir">
 <meta property="article:tag" content="数据结构">
 <meta name="twitter:card" content="summary">
@@ -183,16 +183,14 @@
     <div class="article-entry" itemprop="articleBody">
       
         <p><img src="https://i.loli.net/2020/08/07/guwAYdj5h1lH4Qm.jpg" alt></p>
-<h2 id="练习1"><a href="#练习1" class="headerlink" title="练习1"></a>练习1</h2><p><strong>（1）问题描述</strong></p>
-<p>​        对任意输入的两个按值非递减有序的整数序列，写一程序将它们归并成一个按值非递减有序序列。请分别用顺序存储结构和链式存储结构表示整数序列，并相应完成归并。</p>
-<p><strong>（2）输入描述</strong></p>
-<p>​       文本文件“input.txt”中保存了n个测试用例，文件以-1结束。每个用例的第一行m1表示第一个待归并有序序列的元素个数，第二行为该序列的m1个元素，第三行m2表示第二个待归并有序序列的元素个数，第四行为该序列的m2个元素。</p>
-<p><strong>（3）输出描述</strong></p>
-<p>  输出结果保存在文本文件“output.txt”中。对于每个测试用例均有二行输出，第一行输出“Case #:##”，#表示用例的编号（1…n），##表示归并后有序序列的元素个数；第二行输出##个按值非递减有序元素。</p>
-<p><strong>（4）输入示例</strong></p>
-<p>5<br>1  4  8  10  30<br>7<br>2  4  20  35  50  60  86<br>3<br>38  45  100<br>4<br>38  50   100   120<br>-1</p>
-<p><strong>（5）输出示例</strong>    </p>
-<p>Case 1:12<br>1 2  4  4  8  10  20  30  35  50  60  86<br>Case 2:7<br>38 38  45  50  100  100  120</p>
+<p>  此篇为有关于数据结构的练习</p>
+<a id="more"></a>
+
+<h2 id="练习1"><a href="#练习1" class="headerlink" title="练习1"></a>练习1</h2><p><strong>（1）问题描述</strong><br>​        对任意输入的两个按值非递减有序的整数序列，写一程序将它们归并成一个按值非递减有序序列。请分别用顺序存储结构和链式存储结构表示整数序列，并相应完成归并。</p>
+<p><strong>（2）输入描述</strong><br>​       文本文件“input.txt”中保存了n个测试用例，文件以-1结束。每个用例的第一行m1表示第一个待归并有序序列的元素个数，第二行为该序列的m1个元素，第三行m2表示第二个待归并有序序列的元素个数，第四行为该序列的m2个元素。</p>
+<p><strong>（3）输出描述</strong><br>  输出结果保存在文本文件“output.txt”中。对于每个测试用例均有二行输出，第一行输出“Case #:##”，#表示用例的编号（1…n），##表示归并后有序序列的元素个数；第二行输出##个按值非递减有序元素。</p>
+<p><strong>（4）输入示例</strong><br>5<br>1  4  8  10  30<br>7<br>2  4  20  35  50  60  86<br>3<br>38  45  100<br>4<br>38  50   100   120<br>-1</p>
+<p><strong>（5）输出示例</strong><br>Case 1:12<br>1 2  4  4  8  10  20  30  35  50  60  86<br>Case 2:7<br>38 38  45  50  100  100  120</p>
 <p><strong>（6）顺序存储实现</strong></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br></pre></td><td class="code"><pre><span class="line">#define _CRT_SECURE_NO_WARNINGS</span><br><span class="line">#include &lt;stdio.h&gt;</span><br><span class="line">#include &lt;stdlib.h&gt;</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F;线性表顺序存储实现</span><br><span class="line">struct LNode &#123;</span><br><span class="line">	int *value;  &#x2F;&#x2F;数组存放线性表值</span><br><span class="line">	int Last;    &#x2F;&#x2F;线性表表长</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F;初始化空表</span><br><span class="line">void MakeEmpty(LNode&amp; L, int InputSize) &#123;</span><br><span class="line">	L.value &#x3D; (int*)malloc(InputSize * sizeof(int));  &#x2F;&#x2F;为线性表数组分配InputSize大小的空间</span><br><span class="line">	if (!L.value)</span><br><span class="line">		exit(-1);</span><br><span class="line">	L.Last &#x3D; 0;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F;归并List1和List2且写入文档</span><br><span class="line">void MergeAndOutput(LNode&amp; List1, LNode&amp; List2, int InputCase) &#123;</span><br><span class="line"></span><br><span class="line">	&#x2F;&#x2F;为归并后的数据初始化一个线性表，长度为List1,和List2表长之和</span><br><span class="line">	LNode List3;</span><br><span class="line">	MakeEmpty(List3, List1.Last + List2.Last);</span><br><span class="line">	List3.Last &#x3D; List1.Last + List2.Last;</span><br><span class="line"></span><br><span class="line">	&#x2F;&#x2F;依次将两表放入归并线性表</span><br><span class="line">	for (int i &#x3D; 0; i &lt; List1.Last; i++)</span><br><span class="line">		List3.value[i] &#x3D; List1.value[i];</span><br><span class="line">	for (int i &#x3D; List1.Last; i &lt; List3.Last; i++)</span><br><span class="line">		List3.value[i] &#x3D; List2.value[i - List1.Last];</span><br><span class="line">	&#x2F;&#x2F;用快速排序将归并表从小到大排序</span><br><span class="line">	&#x2F;&#x2F;qsort(List3.value, List3.Last, sizeof(int), Sort_settings);</span><br><span class="line"></span><br><span class="line">	&#x2F;&#x2F;用插入算法将归并表排序</span><br><span class="line">	int a,b,temp;</span><br><span class="line">	for ( a &#x3D; 0; a &lt; List3.Last; a++) &#123;</span><br><span class="line">		temp &#x3D; List3.value[a];</span><br><span class="line">		for ( b &#x3D; a - 1; b &gt;&#x3D; 0 &amp;&amp; List3.value[b] &gt; temp; b--) &#123;</span><br><span class="line">			List3.value[b + 1] &#x3D; List3.value[b];</span><br><span class="line">		&#125;</span><br><span class="line">		List3.value[b + 1] &#x3D; temp;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	&#x2F;&#x2F;获取输入文件指针并以读写的方式打开</span><br><span class="line">	FILE* fp &#x3D; NULL;</span><br><span class="line">	fp &#x3D; fopen(&quot;output.txt&quot;, &quot;a&quot;);</span><br><span class="line"></span><br><span class="line">	&#x2F;&#x2F;依次将归并表按照格式输出到“output.txt”</span><br><span class="line">	fprintf(fp, &quot;case %d:%d\n&quot;, InputCase, List3.Last);</span><br><span class="line">	for (int i &#x3D; 0; i &lt; List3.Last; i++)</span><br><span class="line">	&#123;</span><br><span class="line">		fprintf(fp, &quot;%d &quot;, List3.value[i]);</span><br><span class="line">	&#125;</span><br><span class="line">	fprintf(fp, &quot;\n&quot;);</span><br><span class="line"></span><br><span class="line">	fclose(fp);&#x2F;&#x2F;关闭文件通道</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">int main() &#123;</span><br><span class="line">	int InputSize;     &#x2F;&#x2F;记录每组数据的输入量</span><br><span class="line">	int InputCase &#x3D; 0; &#x2F;&#x2F;记录这是第几组归并</span><br><span class="line"></span><br><span class="line">	&#x2F;&#x2F;获取输入文件指针并以只读方式打开</span><br><span class="line">	FILE* fp &#x3D; NULL;</span><br><span class="line">	fp &#x3D; fopen(&quot;input.txt&quot;, &quot;r&quot;);</span><br><span class="line"></span><br><span class="line">	fscanf_s(fp, &quot;%d&quot;, &amp;InputSize);&#x2F;&#x2F;获取第一组线性表数据的数量</span><br><span class="line"></span><br><span class="line">	while (InputSize &gt; 0) &#123;</span><br><span class="line">		InputCase++;</span><br><span class="line"></span><br><span class="line">		&#x2F;&#x2F;初始化线性表List1并逐个从输入文件中获取线性表数组元素</span><br><span class="line">		struct LNode List1;</span><br><span class="line">		MakeEmpty(List1, InputSize);</span><br><span class="line">		for (int i &#x3D; 0; i &lt; InputSize; i++) &#123;</span><br><span class="line">			fscanf(fp, &quot;%d&quot;, &amp;List1.value[i]);</span><br><span class="line">			List1.Last++;</span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line">		fscanf(fp, &quot;%d&quot;, &amp;InputSize);&#x2F;&#x2F;获取第二组线性表数据的数量</span><br><span class="line">		&#x2F;&#x2F;初始化线性表List2并逐个从输入文件中获取线性表数组元素</span><br><span class="line">		struct LNode List2;</span><br><span class="line">		MakeEmpty(List2, InputSize);</span><br><span class="line">		for (int i &#x3D; 0; i &lt; InputSize; i++) &#123;</span><br><span class="line">			fscanf_s(fp, &quot;%d&quot;, &amp;List2.value[i]);</span><br><span class="line">			List2.Last++;</span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line">		MergeAndOutput(List1, List2, InputCase);</span><br><span class="line"></span><br><span class="line">		fscanf(fp, &quot;%d&quot;, &amp;(InputSize)); &#x2F;&#x2F;获取下一对数据的第一组线性表数据的数量</span><br><span class="line">	&#125;</span><br><span class="line">	fclose(fp);&#x2F;&#x2F;关闭文件通道</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
@@ -201,16 +199,12 @@
 
 
 
-<h2 id="练习2"><a href="#练习2" class="headerlink" title="练习2"></a>练习2</h2><p><strong>（1）问题描述</strong></p>
-<p>​     对任意输入的十进制正整数，写一程序将其转换成二进制表示。要求首先实现Stack ADT，然后用栈的基本操作完成该程序。请分别用顺序存储结构表示和链式存储结构表示栈，并相应完成数据转换。</p>
-<p><strong>（2）输入描述</strong></p>
-<p>​      文本文件“input.txt”中保存了n个小于32768的正整数，文件以-1结束。</p>
-<p><strong>（3）输出描述</strong></p>
-<p>​       输出结果保存在文本文件“output.txt”中，文件每一行输出“#—&gt;##”，#表示十进制表示的正整数，##为其二进制表示结果。</p>
-<p><strong>（4）输入示例</strong></p>
-<p> 20<br> 16<br> 34<br> 45<br> 100<br> -1</p>
-<p><strong>（5）输出示例</strong>    </p>
-<p> 20—&gt;10100<br> 16—&gt;10000<br> 34—&gt;100010<br> 45—&gt;101101<br> 100—&gt;1100100</p>
+
+<h2 id="练习2"><a href="#练习2" class="headerlink" title="练习2"></a>练习2</h2><p><strong>（1）问题描述</strong><br>​     对任意输入的十进制正整数，写一程序将其转换成二进制表示。要求首先实现Stack ADT，然后用栈的基本操作完成该程序。请分别用顺序存储结构表示和链式存储结构表示栈，并相应完成数据转换。</p>
+<p><strong>（2）输入描述</strong><br>​      文本文件“input.txt”中保存了n个小于32768的正整数，文件以-1结束。</p>
+<p><strong>（3）输出描述</strong><br>​       输出结果保存在文本文件“output.txt”中，文件每一行输出“#—&gt;##”，#表示十进制表示的正整数，##为其二进制表示结果。</p>
+<p><strong>（4）输入示例</strong><br> 20<br> 16<br> 34<br> 45<br> 100<br> -1</p>
+<p><strong>（5）输出示例</strong><br> 20—&gt;10100<br> 16—&gt;10000<br> 34—&gt;100010<br> 45—&gt;101101<br> 100—&gt;1100100</p>
 <p><strong>（6）顺序存储实现</strong></p>
 <p><strong>（7）链式存储实现</strong></p>
 
@@ -429,15 +423,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">C程序入门</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">工具</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">tools</a>
+                <a href="javascript:void(0)" class="js-tag color1">C程序入门</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">数据结构</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -445,7 +439,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">数据结构</a>
+                <a href="javascript:void(0)" class="js-tag color1">tools</a>
               </li>
             
             <div class="clearfix"></div>
