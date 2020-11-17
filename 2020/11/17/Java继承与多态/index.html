@@ -6,32 +6,22 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://Sleipnir-8.github.io">
-  <title>PicGo + Github 图床 | ╰(￣▽￣)╭ 喔，欢迎你啊！</title>
+  <title>Java继承与多态 | ╰(￣▽￣)╭ 喔，欢迎你啊！</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="​         ​       现阶段的菜鸡作者差不多刚会写博客，为Hexo无法记载本地图片抓狂了好一阵，在试用了各种偏方无果后，终忍无可忍投向了图床的怀抱。 ​        随便瞅了一下第三方图床，就用了一个。注册一个账号就可以免费快速地使用，图片上限也不小，作者就这样天真地准备美滋滋地长期使用下去。然鹅，第二天再登陆图床，一张都没有了！！┻━┻︵╰(‵□′)╯︵┻━┻ ​">
+  <meta name="description" content="面向对象三大特征：封装性、继承性、多态性。 此篇文章搬运教材中的Java继承与多态知识点">
 <meta property="og:type" content="article">
-<meta property="og:title" content="PicGo + Github 图床">
-<meta property="og:url" content="https://sleipnir-8.github.io/2020/05/18/PicGo%20+%20Github%20%E5%9B%BE%E5%BA%8A/index.html">
+<meta property="og:title" content="Java继承与多态">
+<meta property="og:url" content="https://sleipnir-8.github.io/2020/11/17/Java%E7%BB%A7%E6%89%BF%E4%B8%8E%E5%A4%9A%E6%80%81/index.html">
 <meta property="og:site_name" content="╰(￣▽￣)╭ 喔，欢迎你啊！">
-<meta property="og:description" content="​         ​       现阶段的菜鸡作者差不多刚会写博客，为Hexo无法记载本地图片抓狂了好一阵，在试用了各种偏方无果后，终忍无可忍投向了图床的怀抱。 ​        随便瞅了一下第三方图床，就用了一个。注册一个账号就可以免费快速地使用，图片上限也不小，作者就这样天真地准备美滋滋地长期使用下去。然鹅，第二天再登陆图床，一张都没有了！！┻━┻︵╰(‵□′)╯︵┻━┻ ​">
+<meta property="og:description" content="面向对象三大特征：封装性、继承性、多态性。 此篇文章搬运教材中的Java继承与多态知识点">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://i.loli.net/2020/06/10/GygBSiE3VNcYe8X.png">
-<meta property="og:image" content="https://i.loli.net/2020/06/10/DB1zA8rMOT6y9Qp.png">
-<meta property="og:image" content="https://i.loli.net/2020/06/10/hVblNte5Qz3xy4J.png">
-<meta property="og:image" content="https://i.loli.net/2020/06/10/bm9dlSusQXPqEHz.png">
-<meta property="og:image" content="https://i.loli.net/2020/06/10/4B9YNLRylSx2her.png">
-<meta property="og:image" content="https://i.loli.net/2020/06/10/LWwnc9AUtJPsl6G.png">
-<meta property="og:image" content="https://i.loli.net/2020/06/10/3RNTpLhsYnmf1QM.png">
-<meta property="og:image" content="https://i.loli.net/2020/06/10/Bg93TZa8FEI42bV.png">
-<meta property="og:image" content="https://i.loli.net/2020/06/10/tCKxyk2X9DqTu5m.png">
-<meta property="og:image" content="https://i.loli.net/2020/06/10/7t8HGzTaXEFKqkO.png">
-<meta property="og:image" content="https://i.loli.net/2020/06/10/tciIWdv8Dm7VaJ2.png">
-<meta property="article:published_time" content="2020-05-18T14:01:06.000Z">
-<meta property="article:modified_time" content="2020-09-17T10:23:07.649Z">
+<meta property="og:image" content="https://i.loli.net/2020/11/15/6l5LZvIdbMOySnR.jpg">
+<meta property="article:published_time" content="2020-11-17T09:09:02.000Z">
+<meta property="article:modified_time" content="2020-11-17T16:20:41.551Z">
 <meta property="article:author" content="Sleipnir">
-<meta property="article:tag" content="工具">
+<meta property="article:tag" content="Java">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://i.loli.net/2020/06/10/GygBSiE3VNcYe8X.png">
+<meta name="twitter:image" content="https://i.loli.net/2020/11/15/6l5LZvIdbMOySnR.jpg">
   
     <link rel="alternative" href="/atom.xml" title="╰(￣▽￣)╭ 喔，欢迎你啊！" type="application/atom+xml">
   
@@ -172,68 +162,201 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-PicGo + Github 图床" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-Java继承与多态" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      PicGo + Github 图床
+      Java继承与多态
     </h1>
   
 
         
-        <a href="/2020/05/18/PicGo%20+%20Github%20%E5%9B%BE%E5%BA%8A/" class="archive-article-date">
-  	<time datetime="2020-05-18T14:01:06.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-18</time>
+        <a href="/2020/11/17/Java%E7%BB%A7%E6%89%BF%E4%B8%8E%E5%A4%9A%E6%80%81/" class="archive-article-date">
+  	<time datetime="2020-11-17T09:09:02.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-11-17</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>​        <img src="https://i.loli.net/2020/06/10/GygBSiE3VNcYe8X.png" alt="361b52cb1508.png"></p>
-<p>​       现阶段的菜鸡作者差不多刚会写博客，为Hexo无法记载本地图片抓狂了好一阵，在试用了各种偏方无果后，终忍无可忍投向了图床的怀抱。</p>
-<p>​        随便瞅了一下第三方图床，就用了一个。注册一个账号就可以免费快速地使用，图片上限也不小，作者就这样天真地准备美滋滋地长期使用下去。然鹅，第二天再登陆图床，一张都没有了！！┻━┻︵╰(‵□′)╯︵┻━┻</p>
-<p>​        还没外链几张，图就没了，嗨呀好气啊。ε(┬┬﹏┬┬)3</p>
-<p>​       随后仔细看了看几种图床，觉得PicGo + Github 比较稳，速度体验上确实不太能用，但是比较保险，作者目前以smms图床为主力。</p>
+        <p><img src="https://i.loli.net/2020/11/15/6l5LZvIdbMOySnR.jpg" alt></p>
+<p>面向对象三大特征：封装性、继承性、多态性。</p>
+<p>此篇文章搬运教材中的Java继承与多态知识点</p>
 <a id="more"></a>
 
-<h3 id="PicGo-下载安装"><a href="#PicGo-下载安装" class="headerlink" title="PicGo 下载安装"></a>PicGo 下载安装</h3><blockquote>
-<p>PicGo下载地址 <a href="https://github.com/Molunerfinn/PicGo/releases" target="_blank" rel="noopener">https://github.com/Molunerfinn/PicGo/releases</a></p>
-<p>有兴趣的小伙伴可以上Github看源码 <a href="https://github.com/Molunerfinn/PicGo" target="_blank" rel="noopener">https://github.com/Molunerfinn/PicGo</a></p>
-</blockquote>
-<p><img src="https://i.loli.net/2020/06/10/DB1zA8rMOT6y9Qp.png" alt="下载.png"></p>
+<h2 id="继承"><a href="#继承" class="headerlink" title="继承"></a>继承</h2><br>
+
+<h3 id="1-1父类和子类"><a href="#1-1父类和子类" class="headerlink" title="1.1父类和子类"></a>1.1父类和子类</h3><p>​       使用类来对同一类型的对象建模。不同的类也可能会有一些共同的特征和行为，这些共<br>同的特征和行为都统一放在一个类中，它是可以被其他类所共享的。你可以定义特定的类继承自通用类。这些特定的类继承通用类中的特征和方法。</p>
+<p>​       在 <strong>Java</strong> 术语中，如果类 <strong>C1</strong> 扩展自另一个类 <strong>C2</strong>, 那么就将 <strong>C1</strong> 称为次类（ <strong>subclass</strong> ), 将 <strong>C2</strong> 称为超类（<strong>superclass</strong> )。超类也称为父类 <strong>(</strong> <strong>parent</strong> <strong>class</strong>) 或基类 <strong>(</strong> <strong>base</strong> <strong>class</strong>), 次类又称为子类 <strong>(</strong> <strong>child</strong> <strong>class</strong>)、扩展类 <strong>(</strong> <strong>extended</strong> <strong>class</strong>) 或派生类（<strong>derived</strong> <strong>class</strong> )。子类从它的父类中继承可访问的数据域和方法，还可以添加新数据域和新方法。</p>
 <ul>
-<li>PicGo支持下图右侧的七种图床，还有自定义选项。</li>
+<li>和传统的理解不同，子类并不是父类的一个子集。实际上，一个子类通常比它的父类包含更多的信息和方法。</li>
+<li>父类中的私有数据域在该类之外是不可访问的。因此，不能在子类中直接使用。但是，如果父类中定义了公共的访问器 / 修改器，那么可以通过这些公共的访问器 / 修改器来访问和修改它们。</li>
+<li>不是所有的 “是一种”（<strong>is</strong>-<strong>a</strong>) 关系都该用继承来建模。例如：正方形是一种矩形，但是不应该定义一个 <strong>Square</strong> 类来扩展  <strong>Rectangle</strong> 类，因为 <strong>width</strong> 和 <strong>height</strong> 属性并不适合于正方形。应该定义一个继承自<strong>CeometricObject</strong> 类的<strong>Square</strong> 类，并为正方形的边定义一个 <strong>side</strong> 属性。</li>
+<li>继承是用来为 “是一种” 关系（ <strong>is</strong>-<strong>a</strong>) 建模的。不要仅仅为了重用方法这个原因而盲目地扩展一个类。例如：尽管 <strong>Person</strong> 类和<strong>Tree</strong> 类可以共享类似高度和重量这样的通用特性，但是从 <strong>Person</strong> 类扩展出 <strong>Tree</strong> 类是毫无意义的。一个父类和它的子类之间必须存在 “是一种”（<strong>is</strong>-<strong>a</strong>) 关系。</li>
+<li>某些程序设计语言是允许从几个类派生出一个子类的。这种能力称为多重继承<strong>(</strong> <strong>multiple</strong> <strong>inheritance</strong>)。但是在 <strong>Java</strong> 中是不允许多重继承的。一个 <strong>Java</strong> 类只可能直接继承自一个父类。这种限制称为单一继承（ <strong>single</strong> <strong>inheritance</strong>)。如果使用 <strong>extends</strong> 关键字来定义一个子类，它只允许有一个父类。然而，多重继承是可以通过接口来实现的。</li>
 </ul>
-<p><img src="https://i.loli.net/2020/06/10/hVblNte5Qz3xy4J.png" alt="下载 _1_.png"></p>
-<p>PicGo后，加下来转到Github。</p>
-<hr>
-<h3 id="GitHub-所需操作"><a href="#GitHub-所需操作" class="headerlink" title="GitHub 所需操作"></a>GitHub 所需操作</h3><ul>
-<li>新建图片仓库</li>
-</ul>
-<p><img src="https://i.loli.net/2020/06/10/bm9dlSusQXPqEHz.png" alt="下载 _2_.png"></p>
-<p><img src="https://i.loli.net/2020/06/10/4B9YNLRylSx2her.png" alt="下载 _3_.png"></p>
-<p><img src="https://i.loli.net/2020/06/10/LWwnc9AUtJPsl6G.png" alt="下载 _4_.png"></p>
-<p><img src="https://i.loli.net/2020/06/10/3RNTpLhsYnmf1QM.png" alt="下载 _5_.png"></p>
-<p><img src="https://i.loli.net/2020/06/10/Bg93TZa8FEI42bV.png" alt="下载 _6_.png"></p>
-<hr>
-<p><img src="https://i.loli.net/2020/06/10/tCKxyk2X9DqTu5m.png" alt="下载 _7_.png"></p>
+<br>
+
+<br>
+
+<h3 id="1-2使用-super-关键字"><a href="#1-2使用-super-关键字" class="headerlink" title="1.2使用 super 关键字"></a>1.2使用 super 关键字</h3><br>
+
+<h4 id="1-2-1调用父类的构造方法"><a href="#1-2-1调用父类的构造方法" class="headerlink" title="1.2.1调用父类的构造方法"></a>1.2.1调用父类的构造方法</h4><p>​       构造方法用于构建一个类的实例。不同于属性和普通方法，父类的构造方法不会被子类继承。它们只能使用关键字 <strong>super</strong> 从子类的构造方法中调用。</p>
+<p>调用父类构造方法的语法是：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">super() 或者 super(parameters);</span><br></pre></td></tr></table></figure>
+
+<p>​       语句 <strong>super()</strong> 调用父类的无参构造方法，而语句 <strong>super(arguments)</strong> 调用与参数匹配的父类的构造方法。语句 <strong>superO</strong> 和 <strong>super</strong> <strong>(**</strong>arguments<strong>**)</strong> 必须出现在子类构造方法的第一行，这是显式调用父类构造方法的唯一方式。</p>
+<br>
+
+<h4 id="1-2-2-构造方法链"><a href="#1-2-2-构造方法链" class="headerlink" title="1.2.2 构造方法链"></a>1.2.2 构造方法链</h4><p>​       构造方法可以调用重载的构造方法或父类的构造方法。如果它们都没有被显式地调用，编译器就会自动地将 super() 作为构造方法的第一条语句。</p>
+<p>​       在任何情况下，构造一个类的实例时，将会调用沿着继承链的所有父类的构造方法。当构造一个子类的对象时，子类构造方法会在完成自己的任务之前，首先调用它的父类的构造方法。如果父类继承自其他类，那么父类构造方法又会在完成自己的任务之前，调用它自己的父类的构造方法。这个过程持续到沿着这个继承体系结构的最后一个构造方法被调用为止。这就是构造方法链（constructor chaining)。</p>
+<br>
+
+<h4 id="1-2-3-调用父类的方法"><a href="#1-2-3-调用父类的方法" class="headerlink" title="1.2.3 调用父类的方法"></a>1.2.3 调用父类的方法</h4><p>关键字 super 不仅可以引用父类的构造方法，也可以引用父类的方法。所用语法如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">super.方法名(参数);</span><br></pre></td></tr></table></figure>
+
+<p><br><br></p>
+<h3 id="1-3方法重写"><a href="#1-3方法重写" class="headerlink" title="1.3方法重写"></a>1.3方法重写</h3><p>​       子类从父类中继承方法。有时，子类需要修改父类中定义的方法的实现，这称作方法重写（<strong>method</strong> <strong>overriding</strong>)。</p>
 <ul>
-<li>划到底部生成token，注意token只出现一次，记得多备份！</li>
+<li>仅当实例方法是可访问时，它才能被覆盖。因为私有方法在它的类本身以外是不能访问的，所以它不能被覆盖。如果子类中定义的方法在父类中是私有的，那么这两个方法完全没有关系。</li>
+<li>与实例方法一样，静态方法也能被继承。但是，静态方法不能被覆盖。如果父类中定义的静态方法在子类中被重新定义，那么在父类中定义的静态方法将被隐藏。可以使用语法：父类名 .静态方法名（ SuperClassName.staticMethodName) 调用隐藏的静态方法。</li>
 </ul>
-<p><img src="https://i.loli.net/2020/06/10/7t8HGzTaXEFKqkO.png" alt="下载 _8_.png"></p>
-<p>所有做完后再切回PicGO</p>
-<hr>
-<h3 id="终于要完成了"><a href="#终于要完成了" class="headerlink" title="终于要完成了"></a>终于要完成了</h3><p><img src="https://i.loli.net/2020/06/10/tciIWdv8Dm7VaJ2.png" alt="下载 _9_.png"></p>
-<p>下面的指定存储路径可以直接写img/，这会在你的仓库生成img文件夹。</p>
-<blockquote>
-<p>自定义域名 <a href="https://raw.githubusercontent.com/用户名/" target="_blank" rel="noopener">https://raw.githubusercontent.com/用户名/</a> 仓库名/master/img</p>
-</blockquote>
-<p>确定之后github图床就生成了，其余PicGo设置可以根据需求自定义。</p>
-<p>可以到上传区上传图片到Github仓库了。（完）</p>
-<hr>
+<p><br><br></p>
+<h3 id="1-4方法重写与重载"><a href="#1-4方法重写与重载" class="headerlink" title="1.4方法重写与重载"></a>1.4方法重写与重载</h3><p>方法重写是指该方法必须使用相同的签名和相同的返回值类型在子类中定义。</p>
+<ul>
+<li>方法重写发生在通过继承而相关的不同类中；方法重载可以发生在同一个类中，也可以发生在由于继承而相关的不同类中。</li>
+<li>方法重写具有同样的签名和返回值类型；方法重载具有同样的名字，但是不同的参数列表。</li>
+</ul>
+<p>为了避免错误，可以使用一个特殊的 Java 语法，称 为 重 写 标 注（ override annotation),在子类的方法前面放一个 ©Override。例如： </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">public class CircleFromSimpleGeometricObject</span><br><span class="line">      extends SimpleCeometricObject &#123; </span><br><span class="line">      &#x2F;&#x2F; Other methods are omitted</span><br><span class="line">              </span><br><span class="line">      @Override</span><br><span class="line">      public String toString()&#123; </span><br><span class="line">              return super.toString() + &quot;\nradius is •• + radius; </span><br><span class="line">      &#125; </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>​       该标注表示被标注的方法必须重写父类的一个方法。如果具有该标注的方法没有重写父类的方法，编译器将报告一个错误。例如，如果 toString 被错误地输人为 tostring, 将报告一个编译错误。如果没有使用重写标注，编译器不会报告错误。使用标注可以避免错误。</p>
+<p><br><br></p>
+<h3 id="1-5-Object类及其toStrin-方法"><a href="#1-5-Object类及其toStrin-方法" class="headerlink" title="1.5 Object类及其toStrin()方法"></a>1.5 Object类及其toStrin()方法</h3><p>​       如果在定义一个类时没有指定继承性，那么这个类的父类就被默认为是 Object。诸如 String、StringBuilder、Loan 和 GeometricObject 这样的类都是 Object的隐含子类。</p>
+<p>toString()方法的签名是：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">public String toString()</span><br></pre></td></tr></table></figure>
+
+<p>调用一个对象的 toStringO 会返回一个描述该对象的字符串。默认情况下，它返回一个由该对象所属的类名、at 符号（@)以及该对象十六进制形式的内存地址组成的字符串。</p>
+<p><br><br></p>
+<h2 id="多态"><a href="#多态" class="headerlink" title="多态"></a>多态</h2><p>​       首先，定义两个有用的术语：子类型和父类型。一个类实际上定义了一种类型。子类定义的类型称为子类型（subtype), 而父类定义的类型称为父类型（supertype)。因此可以说Circle是GeometricObject 的子类型，而 GeometricObject 是 Circle 的父类型。</p>
+<p>​       继承关系使一个子类继承父类的特征，并且附加一些新特征。子类是它的父类的特殊化，每个子类的实例都是其父类的实例，但是反过来就不成立。例如：每个圆都是一个几何对象，但并非每个几何对象都是圆。因此，总可以将子类的实例传给需要父类型的参数。</p>
+<p>使用父类对象的地方都可以使用子类的对象。这就是通常所说的多态( polymorphism, 它源于希腊文字，意思是 “多种形式” ）。简单来说，多态意味着父类型的变量可以引用子类型的对象。</p>
+<p><br><br></p>
+<h3 id="2-2动态绑定"><a href="#2-2动态绑定" class="headerlink" title="2.2动态绑定"></a>2.2动态绑定</h3><p>​       方法可以在父类中定义而在子类中重写。例如：toStringO 方法是在 Object 类中定义的，而在 GeometricObject 类中盒写。思考下面的代码：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Object o &#x3D; new CeometricObject();</span><br><span class="line">System.out.println(o.toStHng());</span><br></pre></td></tr></table></figure>
+
+<p>​       这里的 o 调用哪个 tostring()呢？为了回答这个问题，我们首先介绍两个术语：声明类型和实际类型。一个变量必须被声明为某种类型。变量的这个类型称为它的声明类型（declared type)。这里，o 的声明类型是 Object。一个引用类型变量可以是一个 null 值或者是一个对声明类型实例的引用。实例可以使用声明类型或它的子类型的构造方法创建。变量的实际类型（actual type) 是被变量引用的对象的实际类。这里，o 的实际类型是 GeometricObject, 因为 o 指向使用 new GeometricObject() 创建的对象。o 调用哪个toString() 方法由 o 的实际类型决定。这称为动态辨定（dynamic binding)。</p>
+<p>​       动态绑定工作机制如下：假设对象 o 是类 Cl, C2, … ，Cn-1, Cn 的实例，其中 C1是 C2的子类，C2 是 C3 的子类，… ，Cn-1是 Cn 的子类，也就是说，Cn 是最通用的类，C1是最特殊的类。在 Java 中，Cn 是 Object 类。如果对象 o 调用一个方法 p, 那么JVM 会依次在类 Cl，C2, … ，Cn-1，Cn中查找方法 p 的实现，直到找到为止。一旦找到一个实现，就停止査找，然后调用这个首先找到的实现。 </p>
+<p>​       匹配方法的签名和绑定方法的实现是两个不同的问题。引用变虽的声明类型决定了编译时匹配哪个方法。在编译时，编译器会根据参数类型、参数个数和参数顺序找到匹配的方法。一个方法可能在沿着继承链的多个类中实现 <strong>java</strong> 虚拟机在运行时动态绑定方法的实现，这是由变量的实际类型决定的。</p>
+<p><br><br></p>
+<h3 id="2-3对象转换和instanceof运算符"><a href="#2-3对象转换和instanceof运算符" class="headerlink" title="2.3对象转换和instanceof运算符"></a>2.3对象转换和instanceof运算符</h3><p><br><br></p>
+<h3 id="2-4Object的equals方法"><a href="#2-4Object的equals方法" class="headerlink" title="2.4Object的equals方法"></a>2.4Object的equals方法</h3><p>在 Object 类中定义的另外一个经常使用的方法是 equals 方法。它的签名是：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">public boolean equals(Object o)</span><br></pre></td></tr></table></figure>
+
+<p>这个方法测试两个对象是否相等。调用它的语法是：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">objectl.equals(object2);</span><br><span class="line">Object 类中 equals 方法的默认实现是：</span><br><span class="line">public boolean equals(Object obj) &#123;</span><br><span class="line">       return (this obj); </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>​       这个实现使用 == 运算符检测两个引用变量是否指向同一个对象。因此，应该在自己的客户类中重写这个方法，以测试两个不同的对象是否具有相同的内容。</p>
+<p>​        equals 方法在 Java API的 许 多 类 中 被 重 写，比 如 java.lang.String 和 java.util .Date, 用于比较两个对象的内容是否相等。String类中的 equals 方法继承自 Object 类，然后在 String类中被重写，使之能够检验两个字符串的内容是否相等。</p>
+<p>可以重写 <strong>Circle</strong> 类中的 <strong>equals</strong> 方法，基于圆的半径比较两个圆是否相等，如下所示：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">public boolean equals(Object o) &#123;</span><br><span class="line">   if (o instanceof Circle)</span><br><span class="line">      return radius &#x3D;&#x3D; ((Circle)o) .radius;</span><br><span class="line">   else</span><br><span class="line">      return this &#x3D;&#x3D; o; </span><br><span class="line">      &#125;</span><br></pre></td></tr></table></figure>
+
+<p><br><br></p>
+<h3 id="2-5ArrayList类"><a href="#2-5ArrayList类" class="headerlink" title="2.5ArrayList类"></a>2.5ArrayList类</h3><p>​      现在，我们介绍一个很有用的用于存储对象的类了。可以创建一个数组存储对象，但是这个数组一旦创建，它的大小就固定了。Java 提供 ArrayList 类来存储不限定个数的对象。 </p>
+<p>​       ArrayList 是一种泛型类，具有一个泛型类型 E。创建一个 ArrayList时，可以指定一个具体的类型来替换 E。</p>
+<table>
+<thead>
+<tr>
+<th>操作</th>
+<th>数组</th>
+<th>ArrayList</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>创建</td>
+<td>String[] a = new String [10]</td>
+<td>ArrayList list &amp;ltstring&amp;gt = new.ArrayList()</td>
+</tr>
+<tr>
+<td>引用元素</td>
+<td>a [index]</td>
+<td>list.get(index)</td>
+</tr>
+<tr>
+<td>更新元素</td>
+<td>a[index] = “London”</td>
+<td>list.set(index,”London”)</td>
+</tr>
+<tr>
+<td>返回大小</td>
+<td>a.length</td>
+<td>list.size()</td>
+</tr>
+<tr>
+<td>添加一个新元素</td>
+<td></td>
+<td>list.add(“London”)</td>
+</tr>
+<tr>
+<td>插入一个新元素</td>
+<td></td>
+<td>list.add(index,”London“)</td>
+</tr>
+<tr>
+<td>删除一个元素</td>
+<td></td>
+<td>list.remove(index)</td>
+</tr>
+<tr>
+<td>删除一个元素</td>
+<td></td>
+<td>list.remove(Object)</td>
+</tr>
+<tr>
+<td>删除所有元素</td>
+<td></td>
+<td>list.clear()</td>
+</tr>
+</tbody></table>
+<p>​       — 旦创建了一个数组，它的大小就确定下来了。可以使用方括号访问数组元素（例如:a[index])。当创建 ArrayList 后它的大小为0。如果元索不在数组列表中，就不能使用get(index)和set(index.element)方法。向数组列表中添加、插人和删除元素是比较容易的，而向数组中添加、插人和删除元素是比较复杂的。为了实现这些操作，必须编写代码操纵这个数组。注意，可以使用java.util.Arrays.sort(array)方法来对一个数组排序。如果要对一个数组列表排序，使用 java.util.Collections.sort(arrayList)方法。</p>
+<p>假设想创建一个用于存储整数的 ArrayList, 可以使用下面代码来创建一个列表吗？</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ArrayList&lt;int&gt; list &#x3D; new ArrayList&lt;&gt;()；</span><br></pre></td></tr></table></figure>
+
+<p>答案是不行。这样行不通，因为存储在 ArrayList 中的元素必须是一种对象。不能使用诸如 int 的基本数据类型来代替一个泛型类型。然而，你可以创建一个存储 Integer 对象的ArrayList, 如下所示：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ArrayList&lt;Integer&gt; list &#x3D; new ArrayList&lt;&gt;();</span><br></pre></td></tr></table></figure>
+
+<p><br><br></p>
+<h3 id="2-6对于列表有用的方法"><a href="#2-6对于列表有用的方法" class="headerlink" title="2.6对于列表有用的方法"></a>2.6对于列表有用的方法</h3><p>我们经常需要从一个对象数组中创建一个数组列表，或者相反。可以使用循环来实现，但是更容易的方法是使用 Java API中的方法。这里是一个从数组中创建一个数组列表的例子：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">String[] array &#x3D; &#123;&quot;red&quot;,&quot;green&quot;,&quot;blue&quot;&#125;;</span><br><span class="line">ArrayList&lt;String&gt; list &#x3D; new ArrayList&lt;&gt;(Arrays.asList(array));</span><br></pre></td></tr></table></figure>
+
+<p>Arrays 类中的静态方法 asList 返回一个列表，该列表传递给 ArrayList 的构造方法用于创建一个 ArrayList。反过来，可以使用下面代码从一个数组列表来创建一个对象数组。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">String[] arrayl &#x3D; new String[list.size()];</span><br><span class="line">list.toArray(arrayl);</span><br></pre></td></tr></table></figure>
+
+<p>调用 list.toArray(arrayl)将 list中的内容复制到 arrayl中。</p>
+<p>如果列表中的元素是可比较的，比如整数、双精度浮点数或者字符串，则可以使用java.util .Collections 类中的静态的 sort 方法来对元素进行排序。这里是一些例子：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Integer [] array &#x3D; &#123;3, 5, 95, 4, 15, 34, 3, 6, 5&#125;;</span><br><span class="line">ArrayList&lt;Integer&gt; list &#x3D; new ArrayListo(Arrays.asList(array));</span><br><span class="line">java.util.Collections.sort(1ist);</span><br><span class="line">System.out.println(list);</span><br></pre></td></tr></table></figure>
+
+<p>可以使用 java.util .Collections 类中的静态的 max 和 min 方法来返回列表中的最大和最小元素。这里是一些例子：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Integer[] array « &#123;3, 5, 95, 4, 15, 34, 3, 6, 5&#125;;</span><br><span class="line">ArrayList&lt;Integer&gt; list &#x3D; new ArrayListo(Arrays.asList(array));</span><br><span class="line">System.out.println(java.util.Collections.max(1ist));</span><br><span class="line">System.out.println(java.util.Collections.min(list));</span><br></pre></td></tr></table></figure>
+
+<p>可以使用 java.util .Collections 类中的静态的 shuffle 方法来随机打乱列表的元素。这里是一些例子：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Integer[] array &#x3D; &#123;3, S, 95, 4, IS, 34, J, 6, S&#125;;</span><br><span class="line">ArrayList&lt;Integer&gt; list &#x3D; new ArrayListo(Arrays.asList(array));</span><br><span class="line">java.util .Col1ections.shuff1e(1ist);</span><br><span class="line">System.out.println(list);</span><br></pre></td></tr></table></figure>
+
+<p><br><br></p>
+<h3 id="2-7自定义栈类、"><a href="#2-7自定义栈类、" class="headerlink" title="2.7自定义栈类、"></a>2.7自定义栈类、</h3><p>可以使用一个ArrayList 来实现 Stack。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line">import java.util.ArrayList; </span><br><span class="line"></span><br><span class="line">     public class MyStack &#123;  </span><br><span class="line">     private ArrayList&lt;Object&gt; list &#x3D; new ArrayListo(); </span><br><span class="line"></span><br><span class="line">     public boolean isEmpty() &#123;</span><br><span class="line">     return list.isEmpty();  </span><br><span class="line">   &#125; </span><br><span class="line"></span><br><span class="line">      public int getSize()&#123;</span><br><span class="line">      return list.size();</span><br><span class="line">   &#125;</span><br><span class="line"></span><br><span class="line">       public Object peek() &#123;</span><br><span class="line">       return list.get(getSize() - 1);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">       public Object pop() &#123;</span><br><span class="line">       Object o -list,get(getSize() - 1);</span><br><span class="line">       list.remove(getSizeO - 1);</span><br><span class="line">       return 0;</span><br><span class="line">   &#125;</span><br><span class="line"></span><br><span class="line">       public void push(Object o) &#123;</span><br><span class="line">       list.add(o);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    ©Override</span><br><span class="line">        public String toStringf) &#123;</span><br><span class="line">        return &quot;stack: &quot; + list.toString();</span><br><span class="line">    &#125;</span><br><span class="line"> &#125;</span><br></pre></td></tr></table></figure>
+
+<p><br><br></p>
+<h3 id="2-8-protected数据和方法ed"><a href="#2-8-protected数据和方法ed" class="headerlink" title="2.8 protected数据和方法ed"></a>2.8 protected数据和方法ed</h3><p><br><br></p>
+<h3 id="2-9-防止扩展和重写"><a href="#2-9-防止扩展和重写" class="headerlink" title="2.9 防止扩展和重写"></a>2.9 防止扩展和重写</h3><p>​       有时候，可能希望防止类扩展。在这种情况下，使用 final 修饰符表明一个类是最终的，是不能作为父类的。Math 类就是一个最终类。String、StringBuilder 和 StringBuffer类也可以是最终类。例如，下面的类 A 就是最终类，是不能被继承的：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">public final class A &#123; </span><br><span class="line">&#x2F;&#x2F; Data fields, constructors, and methods omitted</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>也可以定义一个方法为最终的，最终方法不能被它的子类重写。例如，下面的方法是最终的，是不能重写的：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">public class Test &#123; </span><br><span class="line">     &#x2F;&#x2F; Data fields, constructors, and methods omitted</span><br><span class="line">public final void m()&#123; </span><br><span class="line">     &#x2F;&#x2F; D o something</span><br><span class="line">   &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
 
       
 
@@ -247,7 +370,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">工具</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Java</a>
         		</li>
       		
 		</ul>
@@ -303,7 +426,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=https://sleipnir-8.github.io/2020/05/18/PicGo%20+%20Github%20%E5%9B%BE%E5%BA%8A/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=https://sleipnir-8.github.io/2020/11/17/Java%E7%BB%A7%E6%89%BF%E4%B8%8E%E5%A4%9A%E6%80%81/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -317,18 +440,9 @@
   
 <nav id="article-nav">
   
-    <a href="/2020/05/21/ZeroTier-%E8%BF%9C%E7%A8%8B%E8%AE%BF%E9%97%AE/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          ZeroTier 远程访问
-        
-      </div>
-    </a>
   
-  
-    <a href="/2020/05/17/Rainmeter-%E6%A1%8C%E9%9D%A2%E7%BE%8E%E5%8C%96/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">Rainmeter 桌面美化</div>
+    <a href="/2020/10/29/%E6%9C%89%E5%BA%8F%E8%A1%A8%E5%BD%92%E5%B9%B6/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">数据结构练习（Updating）</div>
       <i class="icon-circle-right"></i>
     </a>
   
