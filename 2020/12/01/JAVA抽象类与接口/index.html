@@ -6,20 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://Sleipnir-8.github.io">
-  <title>JAVA抽象类与接口 | ╰(￣▽￣)╭ 喔，欢迎你啊！</title>
+  <title>Java抽象类与接口 | ╰(￣▽￣)╭ 喔，欢迎你啊！</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="此篇简要介绍java抽象类与接口。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="JAVA抽象类与接口">
+<meta property="og:title" content="Java抽象类与接口">
 <meta property="og:url" content="https://sleipnir-8.github.io/2020/12/01/JAVA%E6%8A%BD%E8%B1%A1%E7%B1%BB%E4%B8%8E%E6%8E%A5%E5%8F%A3/index.html">
 <meta property="og:site_name" content="╰(￣▽￣)╭ 喔，欢迎你啊！">
 <meta property="og:description" content="此篇简要介绍java抽象类与接口。">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://i.loli.net/2020/08/07/VG1LwK7fPtlsIZ8.jpg">
-<meta property="article:published_time" content="2020-12-01T12:04:55.000Z">
-<meta property="article:modified_time" content="2020-12-01T13:08:24.361Z">
+<meta property="article:published_time" content="2020-12-01T07:04:10.000Z">
+<meta property="article:modified_time" content="2020-12-29T06:11:58.365Z">
 <meta property="article:author" content="Sleipnir">
-<meta property="article:tag" content="Java">
+<meta property="article:tag" content="JAVA">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://i.loli.net/2020/08/07/VG1LwK7fPtlsIZ8.jpg">
   
@@ -96,7 +96,7 @@
 		<!-- 网易云音乐插件 -->
 
 	<div style="position:absolute; bottom:120px left:10px; width:100%">
-		<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=220 height=86 src="//music.163.com/outchain/player?type=2&id=1443634040&auto=0&height=66"></iframe>
+		<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=220 height=86 src="//music.163.com/outchain/player?type=2&id=1377642003&auto=0&height=66"></iframe>
 	</div>
 	
 		</nav>
@@ -169,13 +169,13 @@
         
   
     <h1 class="article-title" itemprop="name">
-      JAVA抽象类与接口
+      Java抽象类与接口
     </h1>
   
 
         
         <a href="/2020/12/01/JAVA%E6%8A%BD%E8%B1%A1%E7%B1%BB%E4%B8%8E%E6%8E%A5%E5%8F%A3/" class="archive-article-date">
-  	<time datetime="2020-12-01T12:04:55.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-12-01</time>
+  	<time datetime="2020-12-01T07:04:10.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-12-01</time>
 </a>
         
       </header>
@@ -186,31 +186,23 @@
 <p>此篇简要介绍java抽象类与接口。</p>
 <a id="more"></a>
 
-<br>
-<br>
 
-<h2 id="抽象类"><a href="#抽象类" class="headerlink" title="抽象类"></a>抽象类</h2><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;在继承的层次结构中，每个新子类都使类变得越来越明确和具体。如果从一个子类追溯到父类，类就会变得更通用、更加不明确。类的设计应该确保父类包含它的子类的共同特征。有时候，一个父类设计得非常抽象，以至于它都没有任何具体的实例。这样的类称为抽象类（abstract class)。</p>
+<h2 id="抽象类"><a href="#抽象类" class="headerlink" title="抽象类"></a>抽象类</h2><p>​       在继承的层次结构中，每个新子类都使类变得越来越明确和具体。如果从一个子类追溯<br>到父类，类就会变得更通用、更加不明确。类的设计应该确保父类包含它的子类的共同特<br>征。有时候，一个父类设计得非常抽象，以至于它都没有任何具体的实例。这样的类称为抽<br>象类（abstract class)。</p>
 <ul>
 <li>抽象类和常规类很像，但是不能使用 <strong>new</strong> 操作符创建它的实例。抽象方法只有定义而没有实现。它的实现由子类提供。</li>
 <li>一个包含抽象方法的类必须声明为抽象类。抽象类的构造方法定义为 Protected, 因为它只被子类使用。</li>
 <li>创建一个具体子类的实例时，它的父类的构造方法被调用以初始化父类中定义的数据域。</li>
 </ul>
-<br>
-
 <h3 id="与普通类的区别"><a href="#与普通类的区别" class="headerlink" title="与普通类的区别"></a>与普通类的区别</h3><ul>
 <li>抽象类不能被实例化，但可以创建一个引用变量，其类型是哟个抽象类，指向非抽象的子类实例。 普通类可以被实例化。</li>
 <li>与普通方法的区别：有无方法体</li>
 </ul>
-<br>
-
 <h3 id="抽象类与抽象方法的使用"><a href="#抽象类与抽象方法的使用" class="headerlink" title="抽象类与抽象方法的使用"></a>抽象类与抽象方法的使用</h3><ul>
 <li>抽象类中可以没有抽象方法，但包含了抽象方法的类必须被定义为抽象类</li>
 <li>如果子类没有实现父类的所有抽象方法，子类必须被定义为抽象类。</li>
 <li>没有抽象构造方法，也没有抽象静态方法</li>
 <li>抽象类中可以有非抽象的构造方法，创建子类的实例时可能调用</li>
 </ul>
-<br>
-
 <h3 id="下面是关于抽象类值得注意的几点："><a href="#下面是关于抽象类值得注意的几点：" class="headerlink" title="下面是关于抽象类值得注意的几点："></a>下面是关于抽象类值得注意的几点：</h3><ul>
 <li>抽象方法不能包含在非抽象类中。如果抽象父类的子类不能实现所有的抽象方法，那么子类也必须定义为抽象的。换句话说，在抽象类扩展的非抽象子类中，必须实现所有的抽象方法。还要注意到，抽象方法是非静态的。</li>
 <li>抽象类是不能使用 <strong>new</strong> 操作符来初始化的。但是，仍然可以定义它的构造方法，这个构造方法在它的子类的构造方法中调用。</li>
@@ -219,26 +211,23 @@
 <li>即使子类的父类是具体的，这个子类也可以是抽象的。</li>
 <li>不能使用 new 操作符从一个抽象类创建一个实例，但是抽象类可以用作一种数据类型。</li>
 </ul>
-<br>
-<br>
-<br>
-
-
-
-<h2 id="接口"><a href="#接口" class="headerlink" title="接口"></a>接口</h2><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 接口在许多方面都与抽象类很相似，但是它的目的是指明相关或者不相关类的多个对象的<br>共同行为。例如，使用正确的接口，可以指明这些对象是可比较的、以及可克隆的。</p>
+<h2 id="接口"><a href="#接口" class="headerlink" title="接口"></a>接口</h2><p>接口在许多方面都与抽象类很相似，但是它的目的是指明相关或者不相关类的多个对象的<br>共同行为。例如，使用正确的接口，可以指明这些对象是可比较的、可食用的，以及可克隆的。</p>
 <p>为了区分接口和类，<strong>Java</strong> 采用下面的语法来定义接口：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">[访问修饰] interface 接口名称 [extends 其他的接口名]&#123;</span><br><span class="line">     &#x2F;** 声明变量 *&#x2F;</span><br><span class="line">     &#x2F;** 声明方法 *&#x2F;</span><br><span class="line">&#125;</span><br><span class="line">public interface MyInterface&#123;</span><br><span class="line">   pubilc void method();</span><br><span class="line">   &#x2F;&#x2F;其他方法</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 在 <strong>Java</strong> 中，接口被看作是一种特殊的类。就像常规类一样，每个接口都被编译为独立的字节码文件。使用接口或多或少有点像使用抽象类。例如，可以使用接口作为引用变<strong>M</strong>的数据类型或类型转换的结果等。与抽象类相似，不能使用 <strong>new</strong> 操作符创建接口的实例。<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;接口的存在弥补了Java单根继承的缺点</p>
-<br>
 
+<p>​       在 <strong>Java</strong> 中，接口被看作是一种特殊的类。就像常规类一样，每个接口都被编译为独立的字节码文件。使用接口或多或少有点像使用抽象类。例如，可以使用接口作为引用变<strong>M</strong>的数据类型或类型转换的结果等。与抽象类相似，不能使用 <strong>new</strong> 操作符创建接口的实例。</p>
+<p>接口的存在弥补了Java单根继承的缺点</p>
 <h3 id="JDK8之前必须知道的接口特性"><a href="#JDK8之前必须知道的接口特性" class="headerlink" title="JDK8之前必须知道的接口特性"></a>JDK8之前必须知道的接口特性</h3><ul>
-<li>接口中的变量都是静态常量（ public static final ） ，必须显式初始化</li>
-<li>接口中所有方法默认都是public abstract</li>
-<li>接口没有构造方法，不可以被实例化，但可以被实现（常作为类型使用）</li>
-<li>实现类必须实现接口的所有方法</li>
-<li>实现类可以实现多个接口 （Java中的多继承）<ul>
-<li>implements，多个接口使用逗号隔开</li>
-</ul>
+<li><p>接口中的变量都是静态常量（ public static final ） ，必须显式初始化</p>
+</li>
+<li><p>接口中所有方法默认都是public abstract</p>
+</li>
+<li><p>接口没有构造方法，不可以被实例化，但可以被实现（常作为类型使用）</p>
+</li>
+<li><p>实现类必须实现接口的所有方法</p>
+</li>
+<li><p>实现类可以实现多个接口 （Java中的多继承）</p>
+<p>implements，多个接口使用逗号隔开</p>
 </li>
 </ul>
 <h4 id="notes"><a href="#notes" class="headerlink" title="notes"></a>notes</h4><ul>
@@ -247,38 +236,35 @@
 <li>已个类只能继承一个类，但可以实现多个接口</li>
 <li>一个接口不能实现另一个接口，但可以继承多个其他接口</li>
 </ul>
-<br>
-
 <h3 id="JDK8新增接口特性"><a href="#JDK8新增接口特性" class="headerlink" title="JDK8新增接口特性"></a>JDK8新增接口特性</h3><p>JDK 1.8后，接口里可以有<strong>默认方法</strong>（方法体）了</p>
 <ul>
-<li>default关键字—默认方法</li>
-<li>默认方法可以被继承，通过实例调用</li>
-<li>如果一个类实现了多个接口，多个接口都定义了多个同样的默认方法<ul>
+<li><p>default关键字—默认方法</p>
+</li>
+<li><p>默认方法可以被继承，通过实例调用</p>
+</li>
+<li><p>如果一个类实现了多个接口，多个接口都定义了多个同样的默认方法</p>
+<ul>
 <li>方案一：实现类需要覆盖重写接口中的默认方法不然会报错</li>
 <li>方案二：可以使用super来调用指定接口的默认方法</li>
 </ul>
 </li>
-<li>如果一个类继承了一个抽象类，实现了一个接口，抽象类和接口存在相同的方法<ul>
+<li><p>如果一个类继承了一个抽象类，实现了一个接口，抽象类和接口存在相同的方法</p>
+<ul>
 <li>采取类优先的原则，优先继承抽象类的方法</li>
 </ul>
 </li>
-<li>接口默认方法可以有多个</li>
+<li><p>接口默认方法可以有多个</p>
+</li>
 </ul>
-<br>
-
-<h3 id="Comparable-接口"><a href="#Comparable-接口" class="headerlink" title="Comparable 接口"></a><strong>Comparable</strong> 接口</h3><p>​ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;假设要设计一个求两个相同类型对象中较大者的通用方法。这里的对象可以是两个学生、两个日期、两个圆、 两个矩形或者两个正方形。为了实现这个方法，这两个对象必须是可比较的。因此，这两个对象都该有的共同方法就是 comparable (可比较的）。为此，Java提供了 Comparable 接口。</p>
+<h3 id="Comparable-接口"><a href="#Comparable-接口" class="headerlink" title="Comparable 接口"></a><strong>Comparable</strong> 接口</h3><p>​       假设要设计一个求两个相同类型对象中较大者的通用方法。这里的对象可以是两个学生、两个日期、两个圆、 两个矩形或者两个正方形。为了实现这个方法，这两个对象必须是可比较的。因此，这两个对象都该有的共同方法就是 comparable (可比较的）。为此，Java提供了 Comparable 接口。</p>
 <p>接口的定义如下所示:</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F; Interface for comparing objects, defined in java.lang</span><br><span class="line">package java.lang;</span><br><span class="line">   public interface Comparab1e&lt;E&gt; &#123;</span><br><span class="line">      public int compareTo(E o); </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; compareTo 方法判断这个对象相对于给定对象 o 的顺序，并且当这个对象小于、等于或<br>大于给定对象 o 时，分别返回负整数、0或正整数。<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Comparable 接口是一个泛型接口。在实现该接口时，泛型类型 E 被替换成一种具体的类型。Java 类库中的许多类实现了 Comparable 接口以定义对象的自然顺序。Byte、Short、Integer、Long、Float、Double、Character、Biglnteger、BigDecimalx Calendar、String以及 Date 类 都 实 现 了 Comparable 接 口。</p>
-<br>
 
-<h3 id="Cloneable-接口"><a href="#Cloneable-接口" class="headerlink" title="Cloneable 接口"></a><strong>Cloneable</strong> 接口</h3><p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 经常会出现需要创建一个对象拷贝的情况。为了实现这个目的，需要使用 clone 方法并理解 Cloneable 接口。<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  接口包括常量和抽象方法，但是 Cloneable 接口是一个特殊情况。在 java.lang包中的<br>Cloneable 接口的定义如下所示：</p>
+<p>​       compareTo 方法判断这个对象相对于给定对象 o 的顺序，并且当这个对象小于、等于或<br>大于给定对象 o 时，分别返回负整数、0或正整数。<br>​       Comparable 接口是一个泛型接口。在实现该接口时，泛型类型 E 被替换成一种具体的<br>类型。Java 类库中的许多类实现了 Comparable 接口以定义对象的自然顺序。Byte、Short、<br>Integer、Long、Float、Double、Character、Biglnteger、BigDecimalx Calendar、String<br>以及 Date 类 都 实 现 了 Comparable 接 口。</p>
+<h3 id="Cloneable-接口"><a href="#Cloneable-接口" class="headerlink" title="Cloneable 接口"></a><strong>Cloneable</strong> 接口</h3><p>​       经常会出现需要创建一个对象拷贝的情况。为了实现这个目的，需要使用 clone 方法并理解 Cloneable 接口。<br>​       接口包括常量和抽象方法，但是 Cloneable 接口是一个特殊情况。在 java.lang包中的<br>Cloneable 接口的定义如下所示：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">package java.lang;</span><br><span class="line">public interface Cloneable &#123; </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 这个接口是空的。一个带空体的接口称为标记接口（marker interface)。一个标记接口既<br>不包括常量也不包括方法。它用来表示一个类拥有某些特定的属性。实现 Cloneable 接口的<br>类标记为可克隆的，而且它的对象可以使用在 Object 类中定义的 cloneO 方法克隆。<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Java 库中的很多类（例如，Date、Calendar 和 ArrayList) 实现 Cloneable。这样，这<br>些类的实例可以被克隆。</p>
-<br>
-<br>
-<br>
 
+<p>​       这个接口是空的。一个带空体的接口称为标记接口（marker interface)。一个标记接口既<br>不包括常量也不包括方法。它用来表示一个类拥有某些特定的属性。实现 Cloneable 接口的<br>类标记为可克隆的，而且它的对象可以使用在 Object 类中定义的 cloneO 方法克隆。<br>​       Java 库中的很多类（例如，Date、Calendar 和 ArrayList) 实现 Cloneable。这样，这<br>些类的实例可以被克隆。</p>
 <h2 id="接口与抽象类"><a href="#接口与抽象类" class="headerlink" title="接口与抽象类"></a>接口与抽象类</h2><p>接口的使用和抽象类的使用基本类似，但是，定义一个接口与定义一个抽象类有所不同。</p>
 <table>
 <thead>
@@ -307,7 +293,8 @@
 <li>利用关键字 extends, 接口可以继承其他接口。这样的接口称为子接口（subinterface)。</li>
 <li>通常，推荐使用接口而非抽象类，因为接口可以定义非相关类共有的父类型。接口比类更加灵活。</li>
 </ul>
-<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;接口和抽象类都可以用于为对象指定共同的行为。如何决定是采用接口还是类呢？通 常，比较强的 is-a (是一种）关系清晰地描述了父子关系，应该采用类来建模。例如，因为桔子是一种水果，它们的关系就应该采用类的继承关系来建模。弱的 is-a 关系，也称为 is-kind-of (是一类）关系，表明一个对象拥有某种属性。弱的 is-a 关系可以使用接口建模。例 如，所有的字符串都是可以比较的，因此 String 类实现了 Comparable 接口。圆或者矩形是— 个几何对象，因此 Circle 可以设计为 CeometricObject 的子类。圆有不同的半径，并且可以基于半径进行比较，因此 Circle 可以实现 Comparable 接口。<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 接口比抽象类更加灵活，因为一个子类只能继承一个父类，但是却可以实现任意个数的接口。然而，接口不能具有具体的方法。可以结合接口和抽象类的优点，创建一个接口，使用一个抽象类来实现它。可以视其方便使用接口或者抽象类。</p>
+<p>​       接口和抽象类都可以用于为对象指定共同的行为。如何决定是采用接口还是类呢？通 常，比较强的 is-a (是一种）关系清晰地描述了父子关系，应该采用类来建模。例如，因为桔子是一种水果，它们的关系就应该采用类的继承关系来建模。弱的 is-a 关系，也称为 is-kind-of (是一类）关系，表明一个对象拥有某种属性。弱的 is-a 关系可以使用接口建模。例 如，所有的字符串都是可以比较的，因此 String 类实现了 Comparable 接口。圆或者矩形是— 个几何对象，因此 Circle 可以设计为 CeometricObject 的子类。圆有不同的半径，并且可以基于半径进行比较，因此 Circle 可以实现 Comparable 接口。</p>
+<p>​       接口比抽象类更加灵活，因为一个子类只能继承一个父类，但是却可以实现任意个数的接口。然而，接口不能具有具体的方法。可以结合接口和抽象类的优点，创建一个接口，使用一个抽象类来实现它。可以视其方便使用接口或者抽象类。我们将在第 20 章给出这类设计的实例。</p>
 
       
 
@@ -321,7 +308,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Java</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">JAVA</a>
         		</li>
       		
 		</ul>
@@ -392,8 +379,8 @@
 <nav id="article-nav">
   
   
-    <a href="/2020/11/17/Java%E7%BB%A7%E6%89%BF%E4%B8%8E%E5%A4%9A%E6%80%81/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">Java继承与多态</div>
+    <a href="/2020/11/25/JAVA-%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">JAVA 正则表达式</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -437,7 +424,7 @@
   <div class="outer">
     <div id="footer-info">
     	<div class="footer-left">
-    		&copy; 2020 Sleipnir
+    		&copy; 2021 Sleipnir
     	</div>
       	<div class="footer-right">
       		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
@@ -518,6 +505,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
             <input type="checkbox" q-on="click:toggleTag(e)" q-attr="checked:showTags">
           </label>
           <ul class="article-tag-list" q-show="showTags">
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">JAVA</a>
+              </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">Java</a>
