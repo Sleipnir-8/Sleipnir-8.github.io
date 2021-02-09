@@ -157,6 +157,242 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-前端笔记" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/09/12/%E5%89%8D%E7%AB%AF%E7%AC%94%E8%AE%B0/">前端笔记</a>
+    </h1>
+  
+
+        
+        <a href="/2020/09/12/%E5%89%8D%E7%AB%AF%E7%AC%94%E8%AE%B0/" class="archive-article-date">
+  	<time datetime="2020-09-12T09:10:12.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-09-12</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><img src="https://i.loli.net/2020/09/16/ZeYHkL5sUN76EqW.jpg" alt="68684734_p0.jpg"></p>
+        
+          <a class="article-more-a" href="/2020/09/12/%E5%89%8D%E7%AB%AF%E7%AC%94%E8%AE%B0/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">HTML&CSS</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/09/12/%E5%89%8D%E7%AB%AF%E7%AC%94%E8%AE%B0/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+
+  
+    <article id="post-WIN程序入门——俄罗斯方块·下" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/07/09/WIN%E7%A8%8B%E5%BA%8F%E5%85%A5%E9%97%A8%E2%80%94%E2%80%94%E4%BF%84%E7%BD%97%E6%96%AF%E6%96%B9%E5%9D%97%C2%B7%E4%B8%8B/">C俄罗斯方块·下</a>
+    </h1>
+  
+
+        
+        <a href="/2020/07/09/WIN%E7%A8%8B%E5%BA%8F%E5%85%A5%E9%97%A8%E2%80%94%E2%80%94%E4%BF%84%E7%BD%97%E6%96%AF%E6%96%B9%E5%9D%97%C2%B7%E4%B8%8B/" class="archive-article-date">
+  	<time datetime="2020-07-09T14:51:57.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-09</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><img src="https://i.loli.net/2020/07/09/eDYGujX6WMZslTr.jpg" alt></p>
+<p>此篇为俄罗斯方块的结尾，对定时器函数、消行计分实现、按键控制及其他细节进行把控。完整的代码也将整合在此篇。</p>
+<h3 id="定时器函数"><a href="#定时器函数" class="headerlink" title="定时器函数"></a>定时器函数</h3><p>在游戏进行时，定时器间隔一段时间响应。</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">OnTime</span><span class="params">(HWND hWnd)</span> </span>&#123;</span><br><span class="line">	HDC hDc = GetDC(hWnd);    <span class="comment">//内核对象</span></span><br><span class="line">	<span class="keyword">if</span> (Bottom() == <span class="number">1</span> &amp;&amp; Above() == <span class="number">1</span>)&#123;  <span class="comment">//满足两种情况</span></span><br><span class="line">		SqFa();                          <span class="comment">//继续下落</span></span><br><span class="line">		g_Line++;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">else</span> &#123;</span><br><span class="line">		Change();             <span class="comment">//在显示新随机块前，将1 -&gt; 2, 2的状态为Fixed</span></span><br><span class="line">		Eliminate();          <span class="comment">//消除行</span></span><br><span class="line">		level(hWnd);          <span class="comment">//是否增加难度</span></span><br><span class="line">		<span class="keyword">if</span>(GameOver() == <span class="number">0</span>)&#123;</span><br><span class="line">			KillTimer(hWnd, DEF_TIMER1);</span><br><span class="line">			<span class="keyword">return</span>  <span class="number">0</span>;</span><br><span class="line">		&#125;                     <span class="comment">//检测游戏是否结束</span></span><br><span class="line">		Posi();               <span class="comment">//定位变形基准点</span></span><br><span class="line">		CreatePresentSquare();<span class="comment">//转化后台随机块,取得g_SquareID</span></span><br><span class="line">		CreateRandSquare();   <span class="comment">//产生后台随机块</span></span><br><span class="line">	&#125;</span><br><span class="line">    OnPaint(hDc);                 <span class="comment">//显示方块</span></span><br><span class="line">	ReleaseDC(hWnd,hDc);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+        
+          <a class="article-more-a" href="/2020/07/09/WIN%E7%A8%8B%E5%BA%8F%E5%85%A5%E9%97%A8%E2%80%94%E2%80%94%E4%BF%84%E7%BD%97%E6%96%AF%E6%96%B9%E5%9D%97%C2%B7%E4%B8%8B/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">C程序入门</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/07/09/WIN%E7%A8%8B%E5%BA%8F%E5%85%A5%E9%97%A8%E2%80%94%E2%80%94%E4%BF%84%E7%BD%97%E6%96%AF%E6%96%B9%E5%9D%97%C2%B7%E4%B8%8B/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+
+  
+    <article id="post-WIN程序入门——俄罗斯方块·中" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/07/09/WIN%E7%A8%8B%E5%BA%8F%E5%85%A5%E9%97%A8%E2%80%94%E2%80%94%E4%BF%84%E7%BD%97%E6%96%AF%E6%96%B9%E5%9D%97%C2%B7%E4%B8%AD/">C俄罗斯方块·中</a>
+    </h1>
+  
+
+        
+        <a href="/2020/07/09/WIN%E7%A8%8B%E5%BA%8F%E5%85%A5%E9%97%A8%E2%80%94%E2%80%94%E4%BF%84%E7%BD%97%E6%96%AF%E6%96%B9%E5%9D%97%C2%B7%E4%B8%AD/" class="archive-article-date">
+  	<time datetime="2020-07-09T08:28:40.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-09</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><img src="https://i.loli.net/2020/07/09/Qx3HApC2mDegfGy.png" alt></p>
+<p>先亮出函数实现文件RShead.c的头</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">"RShead.h"</span></span></span><br><span class="line"><span class="keyword">char</span> g_Background[<span class="number">24</span>][<span class="number">16</span>] = &#123; <span class="number">0</span> &#125;;        <span class="comment">//初始化背景数组</span></span><br><span class="line"><span class="keyword">char</span> g_StorgeSquare[<span class="number">2</span>][<span class="number">4</span>];                <span class="comment">//存储方块类型</span></span><br><span class="line"><span class="keyword">int</span> BS[<span class="number">2</span>][<span class="number">4</span>] = &#123; <span class="number">0</span> &#125;;                     <span class="comment">//存储后台产生的随机块</span></span><br><span class="line"><span class="keyword">int</span> Rand = <span class="number">117</span>;                           </span><br><span class="line"><span class="keyword">int</span> g_SquareID = <span class="number">117</span>;                     <span class="comment">//区分变形类型的ID</span></span><br><span class="line"><span class="keyword">int</span> g_Line = <span class="number">117</span>;                         <span class="comment">//变形基准行</span></span><br><span class="line"><span class="keyword">int</span> g_Colum = <span class="number">117</span>;                        <span class="comment">//变形基准列</span></span><br><span class="line"><span class="keyword">int</span> YourPoint = <span class="number">0</span>;                        <span class="comment">//存储分数，一行一百分，多行奖励还没写</span></span><br><span class="line"><span class="keyword">int</span> Level = <span class="number">1</span>;                            <span class="comment">//当前的难度等级</span></span><br><span class="line"><span class="keyword">char</span> strPoint[<span class="number">10</span>] = &#123; <span class="number">0</span> &#125;;                <span class="comment">//存储分数的字符串</span></span><br><span class="line"><span class="keyword">char</span> strlevel[<span class="number">10</span>] = &#123; <span class="number">0</span> &#125;;                <span class="comment">//存储当前等级</span></span><br></pre></td></tr></table></figure>
+        
+          <a class="article-more-a" href="/2020/07/09/WIN%E7%A8%8B%E5%BA%8F%E5%85%A5%E9%97%A8%E2%80%94%E2%80%94%E4%BF%84%E7%BD%97%E6%96%AF%E6%96%B9%E5%9D%97%C2%B7%E4%B8%AD/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">C程序入门</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/07/09/WIN%E7%A8%8B%E5%BA%8F%E5%85%A5%E9%97%A8%E2%80%94%E2%80%94%E4%BF%84%E7%BD%97%E6%96%AF%E6%96%B9%E5%9D%97%C2%B7%E4%B8%AD/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+
+  
     <article id="post-WIN程序入门——俄罗斯方块·上" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -651,11 +887,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">Java</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">JAVA</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Java</a>
+                <a href="javascript:void(0)" class="js-tag color1">MySql</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -667,11 +907,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">数据结构</a>
+                <a href="javascript:void(0)" class="js-tag color4">HTML&CSS</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">HTML&CSS</a>
+                <a href="javascript:void(0)" class="js-tag color5">数据结构</a>
               </li>
              
               <li class="article-tag-list-item">
