@@ -257,11 +257,10 @@
       
         <p><img src="https://i.loli.net/2020/08/07/J98XQ57vCayt6wq.jpg" alt></p>
 <p>使用Java解析xml文件，先附上dom4j的下载链接 。</p>
-<h3 id="XML解析"><a href="#XML解析" class="headerlink" title="XML解析"></a>XML解析</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.io.File;</span><br><span class="line"><span class="keyword">import</span> java.io.IOException;</span><br><span class="line"><span class="keyword">import</span> java.util.Iterator;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> org.dom4j.Document;</span><br><span class="line"><span class="keyword">import</span> org.dom4j.DocumentException;</span><br><span class="line"><span class="keyword">import</span> org.dom4j.Element;</span><br><span class="line"><span class="keyword">import</span> org.dom4j.io.SAXReader;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Demo</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> <span class="keyword">throws</span> DocumentException, IOException </span>&#123;</span><br><span class="line">	</span><br><span class="line">		<span class="comment">// 得到一个SAXReader对象(来自于dom4j jar包)</span></span><br><span class="line">		SAXReader reader = <span class="keyword">new</span> SAXReader();</span><br><span class="line">		Document document = reader.read(<span class="keyword">new</span> File(<span class="string">"xml\\test.lrmx"</span>));</span><br><span class="line">		System.out.println(document.asXML());</span><br><span class="line">		Element root = document.getRootElement(); <span class="comment">// Person根节点</span></span><br><span class="line">		System.out.println(root);</span><br><span class="line">		<span class="comment">// 迭代器遍历标签</span></span><br><span class="line">		<span class="keyword">for</span> ( Iterator&lt;Element&gt; i = root.elementIterator(); i.hasNext();) &#123;</span><br><span class="line">			Element Person = i.next();</span><br><span class="line">			<span class="comment">// 遍历获取标签名</span></span><br><span class="line">			System.out.print(Person.getName() + <span class="string">": "</span>);</span><br><span class="line">			<span class="comment">// 获取标签属性</span></span><br><span class="line">			String Property = Person.getStringValue();</span><br><span class="line">			System.out.println(Property);</span><br><span class="line">			<span class="keyword">if</span>(Property.equals(<span class="string">"JiaTingChengYuan"</span>)) &#123;</span><br><span class="line">				<span class="keyword">for</span>(Iterator&lt;Element&gt; j = Person.elementIterator();j.hasNext();) &#123;</span><br><span class="line">					Element Family = (Element) j.next();</span><br><span class="line">					String FProperty = Family.getStringValue();</span><br><span class="line">					System.out.println(Family.getName()+<span class="string">": "</span>+FProperty);</span><br><span class="line">				&#125;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="创建XML文件"><a href="#创建XML文件" class="headerlink" title="创建XML文件"></a>创建XML文件</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.io.FileWriter;</span><br><span class="line"><span class="keyword">import</span> java.io.IOException;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> org.dom4j.Document;</span><br><span class="line"><span class="keyword">import</span> org.dom4j.DocumentHelper;</span><br><span class="line"><span class="keyword">import</span> org.dom4j.Element;</span><br><span class="line"><span class="keyword">import</span> org.dom4j.io.OutputFormat;</span><br><span class="line"><span class="keyword">import</span> org.dom4j.io.XMLWriter;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">CreateXML</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">	<span class="comment">//创建文档</span></span><br><span class="line">	<span class="function"><span class="keyword">public</span> Document <span class="title">createDoc</span><span class="params">()</span> </span>&#123;</span><br><span class="line">		Document document = DocumentHelper.createDocument();</span><br><span class="line">		Element root = document.addElement(<span class="string">"root"</span>);</span><br><span class="line">		</span><br><span class="line">		Element person1 = root.addElement(<span class="string">"person1"</span>)</span><br><span class="line">				.addAttribute(<span class="string">"Name"</span>, <span class="string">"Sleipnir"</span>)</span><br><span class="line">				.addAttribute(<span class="string">"Adress"</span>, <span class="string">"Mars"</span>)</span><br><span class="line">				.addText(<span class="string">"Sleipnir-8"</span>);</span><br><span class="line">		</span><br><span class="line">		Element person2 = root.addElement(<span class="string">"person2"</span>)</span><br><span class="line">				.addAttribute(<span class="string">"Name"</span>, <span class="string">"Sleipnir2"</span>)</span><br><span class="line">				.addAttribute(<span class="string">"Adress"</span>, <span class="string">"Mercury"</span>)</span><br><span class="line">				.addText(<span class="string">"Sleipnir-9"</span>);</span><br><span class="line">		</span><br><span class="line">		<span class="keyword">return</span> document;</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	<span class="comment">//将文档写入文件</span></span><br><span class="line">	<span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">WriteXML</span></span>&#123;</span><br><span class="line">		<span class="comment">//写入文件</span></span><br><span class="line">		<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">write</span><span class="params">(Document doc)</span> <span class="keyword">throws</span> IOException</span>&#123;</span><br><span class="line">			<span class="keyword">try</span>(FileWriter filewriter = <span class="keyword">new</span> FileWriter(<span class="string">"Person.xml"</span>))&#123;</span><br><span class="line">				XMLWriter writer = <span class="keyword">new</span> XMLWriter(filewriter);</span><br><span class="line">				writer.write(doc);</span><br><span class="line">                writer.close();</span><br><span class="line">			&#125;</span><br><span class="line">		</span><br><span class="line">		OutputFormat format = OutputFormat.createPrettyPrint();</span><br><span class="line">		writer = <span class="keyword">new</span> XMLWriter(System.out,format);</span><br><span class="line">		writer.write(doc);</span><br><span class="line">		</span><br><span class="line">		format = OutputFormat.createCompactFormat();</span><br><span class="line">		writer = <span class="keyword">new</span> XMLWriter(System.out,format);</span><br><span class="line">		writer.write(doc);</span><br><span class="line">        writer.close();</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https:&#x2F;&#x2F;dom4j.github.io&#x2F;</span><br></pre></td></tr></table></figure>
+        
+          <a class="article-more-a" href="/2021/01/18/Java-Dom4j-XML%E8%A7%A3%E6%9E%90/#more">more >></a>
+        
       
 
       
@@ -335,8 +334,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p><img src="https://i.loli.net/2020/08/07/VG1LwK7fPtlsIZ8.jpg" alt></p>
-<h2 id="JAVA类、继承、多态"><a href="#JAVA类、继承、多态" class="headerlink" title="JAVA类、继承、多态"></a>JAVA类、继承、多态</h2>
+        <p><img src="https://i.loli.net/2021/02/10/deq2OEhC5uz39VG.png" alt></p>
         
           <a class="article-more-a" href="/2021/01/05/JAVA%E7%B1%BB-%E7%BB%A7%E6%89%BF-%E5%A4%9A%E6%80%81/#more">more >></a>
         
@@ -520,85 +518,6 @@
       
         <p class="article-more-link">
           <a class="article-more-a" href="/2020/11/25/JAVA-%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-
-  
-    <article id="post-Java继承与多态" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/11/17/Java%E7%BB%A7%E6%89%BF%E4%B8%8E%E5%A4%9A%E6%80%81/">Java继承与多态</a>
-    </h1>
-  
-
-        
-        <a href="/2020/11/17/Java%E7%BB%A7%E6%89%BF%E4%B8%8E%E5%A4%9A%E6%80%81/" class="archive-article-date">
-  	<time datetime="2020-11-17T09:09:02.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-11-17</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p><img src="https://i.loli.net/2020/11/15/6l5LZvIdbMOySnR.jpg" alt></p>
-<p>面向对象三大特征：封装性、继承性、多态性。</p>
-<p>此篇文章搬运教材中的Java继承与多态知识点</p>
-        
-          <a class="article-more-a" href="/2020/11/17/Java%E7%BB%A7%E6%89%BF%E4%B8%8E%E5%A4%9A%E6%80%81/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Java</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/11/17/Java%E7%BB%A7%E6%89%BF%E4%B8%8E%E5%A4%9A%E6%80%81/">展开全文 >></a>
         </p>
       
 
@@ -971,6 +890,83 @@
 
 
   
+    <article id="post-前端笔记" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/09/12/%E5%89%8D%E7%AB%AF%E7%AC%94%E8%AE%B0/">前端笔记</a>
+    </h1>
+  
+
+        
+        <a href="/2020/09/12/%E5%89%8D%E7%AB%AF%E7%AC%94%E8%AE%B0/" class="archive-article-date">
+  	<time datetime="2020-09-12T09:10:12.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-09-12</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><img src="https://i.loli.net/2020/09/16/ZeYHkL5sUN76EqW.jpg" alt="68684734_p0.jpg"></p>
+        
+          <a class="article-more-a" href="/2020/09/12/%E5%89%8D%E7%AB%AF%E7%AC%94%E8%AE%B0/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">HTML&CSS</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/09/12/%E5%89%8D%E7%AB%AF%E7%AC%94%E8%AE%B0/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+
+  
   
     <nav id="page-nav">
       <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">Next &amp;raquo;</a>
@@ -1076,10 +1072,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">MySql</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">工具</a>
               </li>
              
@@ -1088,11 +1080,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">HTML&CSS</a>
+                <a href="javascript:void(0)" class="js-tag color1">MySql</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">数据结构</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">HTML&CSS</a>
               </li>
              
               <li class="article-tag-list-item">
